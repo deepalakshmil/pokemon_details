@@ -28,7 +28,11 @@ async function getPokemonDetails() {
         pokemonInfoElement.innerHTML =
             `<h2>${response.name}</h2>
     <img src="${response.sprites.front_default}" alt="${response.name}">
+    <h3>Pokémon's Type</h3>
+    
+    ${response.types.map(type=>`<li>${type.type.name}</li>`).join('')}
+
     <h3>Thank you!</h3>`;
-    }
+    }                                               
 
 }
